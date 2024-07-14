@@ -21,7 +21,7 @@ def read_sql_data():
             f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={host};DATABASE={db};UID={user};PWD={password};TrustServerCertificate=yes'
         )
         logging.info("Connection Established",conn)
-        df=pd.read_sql_query('Select * from students',conn)
+        df=pd.read_sql_query('Select * from persons',conn)
         print(df.head())
 
         return df
